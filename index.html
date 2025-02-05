@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teatro - Música</title>
+    </head>
+
+    <body bgcolor="pink", text="white">
+        <h1><center>Músicas Em Ordem (Teatro)</center></h1>
+
+        <audio id = 'audio1' src = "C:\Users\victor\OneDrive\Área de Trabalho\Everlong(MP3_160K).mp3" preload = "auto"></audio>
+        <button onclick="reproduzirMusica('audio1')">Abertura</button>
+
+        <audio id = 'audio2' src = "C:\Users\victor\Music\Smells Like Teen Spirit(MP3_160K).mp3" preload = "auto"></audio>
+        <button onclick="reproduzirMusica('audio2')">Troca de Cena</button>
+
+        <audio id = 'audio3' src = "C:\Users\victor\Music\Lithium(MP3_160K).mp3" preload = "auto"></audio>
+        <button onclick="reproduzirMusica('audio3')">Cena da Gaita</button>
+
+        <audio id = 'audio4' src = "C:\Users\victor\Music\Luckhaos - A Moderação.MP3" preload = "auto"></audio>
+        <button onclick="reproduzirMusica('audio4')">Morte de João</button>
+
+        <audio id = 'audio5' src = "C:\Users\victor\Music\MC VV - Mando o Michael (legendado)(MP3_160K).mp3" preload = "auto"></audio>
+        <button onclick="reproduzirMusica('audio5')">Intro João e Chicó</button>
+    
+        <script>
+            function reproduzirMusica(id){
+                var audio = document.querySelectorAll('audio');
+                audio.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+
+                var audio = document.getElementById(id);
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
